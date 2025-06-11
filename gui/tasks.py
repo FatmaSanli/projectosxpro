@@ -2,7 +2,7 @@ from PyQt6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QListWidget, QListWidgetItem, QLineEdit, QDateEdit, QDialog, QDialogButtonBox, QFormLayout, QComboBox, QTextEdit
 )
 from PyQt6.QtCore import Qt, QDate
-from gui.tasks_db import get_tasks, add_task, update_task_status, delete_task, edit_task
+from logic.tasks_db import get_tasks, add_task, update_task_status, delete_task, edit_task
 
 class DateDialog(QDialog):
     """
