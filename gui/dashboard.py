@@ -1,7 +1,7 @@
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QHBoxLayout, QProgressBar, QSizePolicy, QMenu, QPushButton
 from PyQt6.QtGui import QAction, QCursor
 from PyQt6.QtCore import Qt
-from gui.tasks_db import get_tasks
+from logic.tasks_db import get_tasks
 
 class DashboardPage(QWidget):
     """
@@ -125,7 +125,7 @@ class DashboardPage(QWidget):
         login = LoginDialog()
         if login.exec() == login.DialogCode.Accepted:
             username, password = login.get_credentials()
-            from gui.tasks_db import check_user
+            from logic.tasks_db import check_user
             if check_user(username, password):
                 from gui.main_window import MainWindow
                 window = MainWindow()
