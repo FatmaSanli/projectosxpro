@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel
-from gui.tasks_db import get_tasks
+from logic.tasks_db import get_tasks
 import pandas as pd
 import matplotlib.dates as mdates
 

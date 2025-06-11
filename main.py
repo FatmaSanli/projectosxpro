@@ -9,33 +9,6 @@ import sqlite3
 
 DB_PATH = "tasks.db"
 
-def init_db():
-    """
-    Initialisiert die Aufgaben-Datenbank und führt ggf. Migrationen durch.
-    """
-    conn = sqlite3.connect(DB_PATH)
-    c = conn.cursor()
-    c.execute("PRAGMA table_info(tasks)")
-    columns = [col[1] for col in c.fetchall()]
-    if "description" not in columns:
-        try:
-            c.execute("ALTER TABLE tasks ADD COLUMN description TEXT")
-        except sqlite3.OperationalError:
-            pass
-    conn.commit()
-    conn.close()
-
-def get_tasks():
-    """
-    Gibt alle Aufgaben als Liste von Tupeln zurück.
-    """
-    conn = sqlite3.connect(DB_PATH)
-    c = conn.cursor()
-    c.execute("SELECT id, title, status, due_date, start_date, end_date, description FROM tasks")
-    tasks = c.fetchall()
-    conn.close()
-    return tasks
-
 def main():
     """
     Startet die Anwendung, initialisiert die Datenbanken und zeigt das Login-Fenster.

@@ -2,7 +2,7 @@ import json
 import os
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QPushButton, QFileDialog, QMessageBox, QComboBox
 from PyQt6.QtCore import pyqtSignal
-from gui.tasks_db import export_tasks_to_csv, import_tasks_from_csv, export_tasks_to_pdf
+from logic.tasks_db import export_tasks_to_csv, import_tasks_from_csv, export_tasks_to_pdf
 
 SETTINGS_PATH = "settings.json"
 

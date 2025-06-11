@@ -1,3 +1,4 @@
+from logic.tasks_db import *
 import sqlite3
 import csv
 from reportlab.lib.pagesizes import A4
