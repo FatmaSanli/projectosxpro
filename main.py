@@ -2,7 +2,7 @@ from PyQt6.QtWidgets import QApplication, QMessageBox, QDialog
 import sys
 from gui.main_window import MainWindow
 from gui.login import LoginDialog
-from gui.tasks_db import init_db, init_user_db, check_user, add_task
+from logic.tasks_db import init_db, init_user_db, check_user, add_task
 from gui.dashboard import DashboardPage
 from datetime import datetime, timedelta
 import sqlite3
