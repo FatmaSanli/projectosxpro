@@ -39,7 +39,7 @@ class LoginDialog(QDialog):
         """
         Öffnet den Registrierungsdialog und legt ggf. einen neuen Benutzer an.
         """
-        from gui.tasks_db import add_user
+        from logic.tasks_db import add_user
         dlg = RegisterDialog(self)
         if dlg.exec() == QDialog.DialogCode.Accepted:
             username, password = dlg.get_credentials()
